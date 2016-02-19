@@ -1,5 +1,5 @@
 <% cache [locale_and_user_status, debate, @debate_votes[debate.id]] do %>
-  <div id="<%= dom_id(debate) %>" class="debate clear">
+  <div id="<%= dom_id(debate) %>" class="debate clear" data-type="debate">
     <div class="panel">
       <div class="row">
 
@@ -42,10 +42,10 @@
             </p>
             <div class="debate-description">
               <% if debate.description.present? %>
-                <%= link_to debate.description, debate %> 
+                <%= link_to debate.description, debate %>
               <% end %>
               <% if debate.external_link.present? %>
-                 <%= link_to debate.external_link, debate.external_link, target: '_blank' %> 
+                 <%= link_to debate.external_link, debate.external_link, target: '_blank' %>
               <% end %>
               <div class="truncate"></div>
             </div>

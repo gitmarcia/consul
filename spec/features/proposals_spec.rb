@@ -646,7 +646,7 @@ feature 'Proposals' do
           click_button "Filter"
 
           within("#proposals") do
-            expect(page).to have_css('.proposal', count: 2)
+            expect(page).to have_selector('[data-type="proposal"]', count: 2)
 
             expect(page).to have_content(proposal1.title)
             expect(page).to have_content(proposal2.title)
@@ -669,7 +669,7 @@ feature 'Proposals' do
           click_button "Filter"
 
           within("#proposals") do
-            expect(page).to have_css('.proposal', count: 2)
+            expect(page).to have_selector('[data-type="proposal"]', count: 2)
 
             expect(page).to have_content(proposal1.title)
             expect(page).to have_content(proposal2.title)

@@ -502,7 +502,7 @@ feature 'Debates' do
         click_button "Filter"
 
         within("#debates") do
-          expect(page).to have_css('.debate', count: 2)
+          expect(page).to have_selector('[data-type="debate"]', count: 2)
 
           expect(page).to have_content(debate1.title)
           expect(page).to have_content(debate2.title)
@@ -527,7 +527,7 @@ feature 'Debates' do
           click_button "Filter"
 
           within("#debates") do
-            expect(page).to have_css('.debate', count: 2)
+            expect(page).to have_selector('[data-type="debate"]', count: 2)
 
             expect(page).to have_content(debate1.title)
             expect(page).to have_content(debate2.title)
@@ -596,7 +596,7 @@ feature 'Debates' do
           click_button "Filter"
 
           within("#debates") do
-            expect(page).to have_css('.debate', count: 2)
+            expect(page).to have_selector('[data-type="debate"]', count: 2)
 
             expect(page).to have_content(debate1.title)
             expect(page).to have_content(debate2.title)
